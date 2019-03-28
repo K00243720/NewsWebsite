@@ -966,7 +966,7 @@ textarea {
     
     .men {
     display: grid;
-        grid-gap: .2em;
+    grid-gap: .2em;
      margin-bottom: -30px;
     grid-template-columns: 3fr 2fr;
 	}
