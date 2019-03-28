@@ -3,14 +3,12 @@
   src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
 }
 
-font-family: miller-text, serif;
-
 body {
     font-family: miller-text, serif;
     font-style: normal;
     font-weight: 400;
 	height: 100%;
-    margin: 40px;
+    margin: 20px;
 }
 
 .wrapper {
@@ -80,6 +78,10 @@ body {
     grid-area: sidebar13;
     }
 
+.sidebar14 {
+    grid-area: gallery;
+    }
+
 .header {
     grid-area: header;
     }
@@ -114,26 +116,32 @@ body {
      "sidebar12"
      "sidebar4"
      "sidebar6"
+      "gallery"
      "sidebar7"
-     "sidebar8"
      "sidebar13"
+      "sidebar5"
      "sidebar9"
      "sidebar10"
-     "sidebar5"
      "nav"
      "footer"
   }
 
 /*internal pages grids */
-.section-grid {
-    display: grid;
-}
 
+.women .section2 {
+    display: contents;
+    grid-gap: .2em;
+}
 
 
 .box .box {
     background-color: #e5e5e5;
 	}
+
+.galleryMain {
+  background-color: #e5e5e5;
+    padding: 10px;
+}
 
 .big1 {
 		grid-column: col / span 4;
@@ -299,7 +307,7 @@ figure {
 .content {
   color: #fff;
 }
-
+    
 h1 { font-size: 1.9em;
 margin-top: 10px;
 margin-bottom: auto;
@@ -373,6 +381,7 @@ header a.logo {
   margin: 0;
 }
 
+/*navigation*/
 .WideNav {
     background-color: #c02d47; 
     list-style-type: none;
@@ -410,13 +419,15 @@ nav > ul > li {
     display: none;
 }
 
-footer:: after {
+/*footer*/
+
+footer::after {
     content:''; display: block; clear: both;
 }
 
 footer {  
     text-align: center;
-    margin 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .footer-content {  
@@ -896,6 +907,7 @@ textarea {
 .gallery {
     margin: 10px 50px;
     align-content: center;
+    padding-bottom: 20px;
 }
 
 .gallery img {
@@ -910,6 +922,9 @@ textarea {
 
 .gallery h1 {
     text-align: center;
+    padding-top: 10px;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
 /* Media Queries */
@@ -925,34 +940,44 @@ textarea {
         "content sidebar5"
         "sidebar3 sidebar"
         "sidebar3 sidebar2"
-        "sidebar6 sidebar12"
-        "sidebar11 sidebar10"
-        "sidebar4 sidebar9"
-        "sidebar4 sidebar8"
+        "gallery sidebar12"
+        "sidebar6 sidebar10"
+        "sidebar6 sidebar9"
+        "sidebar11 sidebar4"
         "sidebar7 sidebar13"
         "footer  footer"
           }
     
+    /*
     
-    .columnPage {
-        display: contents;
-    }
-    
-.main-column {
-  flex: 2;
-}
-
-.nested-column {
-    flex: 1;
-}
-  
-    .section2 {
+     .women .section2 {
     display: contents;
-    grid-gap: .5em;
     grid-template-columns: repeat(6, [col] 220px);
     grid-template-rows: repeat(2, [row] auto);
-   background-color: #fff;
 	}
+    */
+    
+    .women .section2 {
+    display: grid;
+        grid-gap: .2em;
+        margin-bottom: -30px;
+    grid-template-columns: 4fr 2fr;
+	}
+    
+    .men {
+    display: grid;
+        grid-gap: .2em;
+     margin-bottom: -30px;
+    grid-template-columns: 3fr 2fr;
+	}
+    
+    .main-column {
+  flex: 2;
+}
+    
+    .nested-column {
+    flex: 1;
+}
     
     h1 { font-size: 1.8em; }
     h2 { font-size: 1.4em; }
@@ -1090,6 +1115,12 @@ textarea {
     display: flex;
   }
     
+    .box-sidebar{
+        flex: 1;
+    }
+    
+    
+    
     .box footer {
         display: inline-flex;
         position: relative;
@@ -1118,11 +1149,6 @@ textarea {
 
 @media screen and (min-width : 980px) {
    
-    .homepage {
-        grid-template-columns: 5fr 2fr;
-          }
-    
-    
     h1 { font-size: 2.6em; }
     h2 { font-size: 1.6em; }
     h3 { font-size: 1.2em; }  
@@ -1140,25 +1166,37 @@ textarea {
 
 @media screen and (min-width : 1200px) {
     .homepage {
-    grid-template-columns: 300px auto 300px;
+    grid-template-columns: 2fr 3fr 1fr;
         grid-template-areas:
         "header  header  header"
         "nav     nav     nav"
         "ticker  ticker  ticker"
-        "sidebar  content sidebar2"
-        "sidebar3 content sidebar4"
-        "sidebar11 sidebar6 sidebar5"
-         "sidebar7 sidebar9 sidebar13"
-        "sidebar8 sidebar12 sidebar10"
-         "sidebar8 sidebar12 sidebar10"
+        "sidebar  content sidebar11"
+        "sidebar3  content sidebar11"
+        "sidebar13 sidebar6 sidebar5"
+        "sidebar9  gallery  gallery"
+         "sidebar10 gallery gallery"
+         "sidebar2 sidebar7 sidebar7"
+         "sidebar4 sidebar7 sidebar7"
         "footer  footer   footer"
           }
-
-    .columnPage {
-        display: contents;
-        grid-template-columns: auto 2fr;
+    
+    .sidebar12 {
+        display: none;
     }
     
+    .women {
+        grid-template-columns: 2fr; 
+    }
+    
+    .men {
+    grid-template-columns: 4fr 2fr;
+	}
+    
+    .columnPage {
+        display: contents;
+    }
+
      .main-column {
     flex: 4;
   }
@@ -1166,6 +1204,8 @@ textarea {
   .nested-column {
     flex: 3;
   }
+    
+    
     
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.6em; }
