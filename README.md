@@ -12,13 +12,19 @@ Grids and how they position on a page was the most difficult learning aspect of 
     grid-template-columns: repeat(6, [col] 220px);
     grid-template-rows: repeat(2, [row] auto); }
 ```
+
 This is how it looks in the end: 
 
-Desktop
+
+Desktop Site
+
+
 <img src="img/screen1.GIF" alt="desktop" width="654" height="450" style="max-width:100%">
 
-Mobile
-<img src="img/screen2.GIF" alt="mobile" width="654" height="450">
+
+Mobile Site
+
+<img src="img/screen2.GIF" alt="mobile" width="320" height="750">
                                                                  
                                                                  
 ## Learning Github 
