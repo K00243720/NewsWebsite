@@ -138,23 +138,12 @@ body {
     grid-gap: .2em;
 }
 
-/*
-.men .columnPage {
-    grid-template-columns: 1fr;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    flex-direction: column;
-    //display: grid;
-   // display: flex;
-    grid-gap: .2em;
-*/
 
 .second-grid {
     grid-template-columns: 1fr;
     grid-column-start: 1;
     grid-column-end: 2;
     flex-direction: column;
-    //display: grid;
     display: flex;
     grid-gap: .2em;
 }
@@ -174,12 +163,11 @@ body {
 }
 
 
-.allNews{
+.allNews {
     background-color: #292351;
     grid-column-start: 1;
     grid-column-end: 2;
     flex-direction: column;
-    //display: grid;
     display: flex;
     grid-template-columns: 1fr;
     grid-gap: .5em;
@@ -188,11 +176,9 @@ body {
         margin: 20px 30px 0 0;
         width: 150px;
         object-fit: contain;
-        align-self: flex-start;
-    }
+        align-self: flex-start;}
     &__text {
-        flex: 1 1 auto;
-    }
+        flex: 1 1 auto;}
 }
 
 .big1 {
@@ -999,15 +985,6 @@ textarea {
         "sidebar7 sidebar13"
         "footer  footer"
           }
-    
-    /*
-    
-     .women .section2 {
-    display: contents;
-    grid-template-columns: repeat(6, [col] 220px);
-    grid-template-rows: repeat(2, [row] auto);
-	}
-    */
     
     .allNews{
     grid-column-end: end;
