@@ -14,7 +14,7 @@ body {
 .wrapper {
     margin: 0 auto;
     min-width: 380px;
-    max-width: 1300px;
+    max-width: 1360px;
     background-color: #fff;
     color: #292351;
     width: 100%;
@@ -141,6 +141,28 @@ body {
 .galleryMain {
   background-color: #e5e5e5;
     padding: 10px;
+}
+
+.allNews{
+    background-color: #292351;
+    //grid-template-columns: repeat(11, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 12;
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-gap: .5em;
+    padding: 10px;
+}
+
+.allNews .article {
+  //  text-align: right;
+}
+
+.allNews li {
+  display: inline-flex;
 }
 
 .big1 {
@@ -959,15 +981,15 @@ textarea {
     
     .women .section2 {
     display: grid;
-        grid-gap: .2em;
-        margin-bottom: -30px;
+    grid-gap: .2em;
+    margin-bottom: -30px;
     grid-template-columns: 4fr 2fr;
 	}
     
     .men {
     display: grid;
     grid-gap: .2em;
-     margin-bottom: -30px;
+    margin-bottom: -30px;
     grid-template-columns: 3fr 2fr;
 	}
     

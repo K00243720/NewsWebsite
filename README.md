@@ -1,6 +1,6 @@
 # NewsWebsite
 
-This is a news website that I have produced as part of my H.Dip Creative Multimedia Programming course. I'm brand new to programming, so this has been a huge learning curve. 
+This is a news website that I have produced as part of my H.Dip Creative Multimedia Programming course. I'm brand new to programming, so this has been a huge learning curve. It has been created using HTML5, CSS3 and JQuery.
 
 ## Visuals
 
